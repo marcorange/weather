@@ -1,24 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cLb-d6-Kwn">
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Item 2-->
+        <scene sceneID="csy-hg-UgV">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="rpF-Wa-PJz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3An-pV-pBu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="MQe-PS-5OY"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="aN9-au-nqg"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M5P-ej-HVG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="91" y="291"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="AO7-ZZ-CWc">
+            <objects>
+                <viewController id="nbw-Rf-bK5" customClass="ViewController" customModule="weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y39-XF-7AR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQf-Hc-zLD">
+                                <rect key="frame" x="85" y="90" width="150" height="110"/>
+                                <fontDescription key="fontDescription" name="DamascusBold" family="Damascus" pointSize="50"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="T" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDG-Lg-t1N">
+                                <rect key="frame" x="85" y="185" width="150" height="110"/>
+                                <fontDescription key="fontDescription" name="DamascusBold" family="Damascus" pointSize="50"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uia-AG-Qf5">
+                                <rect key="frame" x="43" y="282" width="235" height="107"/>
+                                <fontDescription key="fontDescription" name="DamascusBold" family="Damascus" pointSize="41"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bK5-g2-R2f"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="cDG-Lg-t1N" firstAttribute="centerX" secondItem="bK5-g2-R2f" secondAttribute="centerX" id="1Mx-VD-cJk"/>
+                            <constraint firstItem="uQf-Hc-zLD" firstAttribute="centerX" secondItem="bK5-g2-R2f" secondAttribute="centerX" id="608-ZL-C7G"/>
+                            <constraint firstItem="cDG-Lg-t1N" firstAttribute="centerY" secondItem="bK5-g2-R2f" secondAttribute="centerY" id="Bbs-1A-j4q"/>
+                            <constraint firstItem="cDG-Lg-t1N" firstAttribute="top" secondItem="uQf-Hc-zLD" secondAttribute="bottom" constant="-15" id="fwc-LD-XIQ"/>
+                            <constraint firstItem="Uia-AG-Qf5" firstAttribute="top" secondItem="cDG-Lg-t1N" secondAttribute="bottom" constant="-13" id="juf-au-165"/>
+                            <constraint firstItem="Uia-AG-Qf5" firstAttribute="centerX" secondItem="bK5-g2-R2f" secondAttribute="centerX" id="nHJ-9N-T3e"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="rVv-e1-akC"/>
+                    <connections>
+                        <outlet property="cityNameLabel" destination="uQf-Hc-zLD" id="mDH-kP-Qss"/>
+                        <outlet property="currentTempLabel" destination="cDG-Lg-t1N" id="8rm-wQ-jaf"/>
+                        <outlet property="weatherDescriptionLabel" destination="Uia-AG-Qf5" id="bZc-b1-GhH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="444-cn-BxO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="88.125" y="-317.5"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="s71-2b-Mby">
+            <objects>
+                <tabBarController id="cLb-d6-Kwn" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pMO-pk-cQ4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="nbw-Rf-bK5" kind="relationship" relationship="viewControllers" id="eeo-8Q-Fr1"/>
+                        <segue destination="rpF-Wa-PJz" kind="relationship" relationship="viewControllers" id="1In-i0-JZn"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cax-i9-h12" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-759" y="-47"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
