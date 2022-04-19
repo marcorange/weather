@@ -15,7 +15,7 @@ class WeatherService {
 	private init() {}
 	
 	var weatherDescription = ""
-	var weatherDescriptionIcon = ""
+	var weatherDescriptionIconID = 0
 	
 	var currentTemp = 0.0
 	var tempFeelsLike = 0.0
@@ -54,7 +54,7 @@ class WeatherService {
 	
 	private func parseWeatherData(_ data: WeatherDataModel) {
 		self.weatherDescription = data.weather[0].description
-		self.weatherDescriptionIcon = data.weather[0].icon
+		self.weatherDescriptionIconID = data.weather[0].id
 		
 		guard let temp = data.main["temp"] else { return }
 		self.currentTemp = temp
