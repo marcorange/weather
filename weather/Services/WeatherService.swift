@@ -9,7 +9,10 @@ import Foundation
 import Alamofire
 
 class WeatherService {
+	
 	static let shared = WeatherService()
+	
+	private init() {}
 	
 	var weatherDescription = ""
 	var weatherDescriptionIcon = ""
@@ -32,13 +35,11 @@ class WeatherService {
 	
 	var cityName = ""
 	
-	private init(){}
-	
-//	private func validateCity()
-	func fetchWeatherData(forCity city: String) {
+	// validateCity() ?
+	func fetchWeatherData(completion: @escaping () -> ()) {
 		let url = "https://api.openweathermap.org/data/2.5/weather"
 		let apiKey = "fcab6dfb7a165ced098153f4f57903fc"
-		let parameters: Parameters = [ "q": city,
+		let parameters: Parameters = [ "q": self.cityName,
 									   "units": "metric",
 									   "appid": apiKey ]
 		
@@ -46,9 +47,8 @@ class WeatherService {
 			.validate()
 			.responseDecodable(of: WeatherDataModel.self) { response in
 				guard let fetchedData = response.value else { return }
-				//				let cityName = fetchedData.name
-				//				self.cityName = cityName
 				self.parseWeatherData(fetchedData)
+				completion()
 			}
 	}
 	
@@ -83,3 +83,4 @@ class WeatherService {
 		self.cityName = data.name
 	}
 }
+

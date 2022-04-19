@@ -8,51 +8,75 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Tab TwoVC-->
         <scene sceneID="csy-hg-UgV">
             <objects>
-                <viewController id="rpF-Wa-PJz" sceneMemberID="viewController">
+                <viewController id="rpF-Wa-PJz" customClass="TabTwoVC" customModule="weather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3An-pV-pBu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pressure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HE-7V-v18">
+                                <rect key="frame" x="97" y="161" width="127" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pressure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Stf-BJ-362">
+                                <rect key="frame" x="97" y="91" width="127" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="MQe-PS-5OY"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Stf-BJ-362" firstAttribute="centerX" secondItem="MQe-PS-5OY" secondAttribute="centerX" id="9Hd-l4-0iJ"/>
+                            <constraint firstItem="7HE-7V-v18" firstAttribute="top" secondItem="Stf-BJ-362" secondAttribute="bottom" constant="29" id="nhb-wj-Aeg"/>
+                            <constraint firstItem="7HE-7V-v18" firstAttribute="centerY" secondItem="MQe-PS-5OY" secondAttribute="centerY" id="tfL-Md-jJy"/>
+                            <constraint firstItem="7HE-7V-v18" firstAttribute="centerX" secondItem="MQe-PS-5OY" secondAttribute="centerX" id="vbi-5M-Ywt"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="aN9-au-nqg"/>
+                    <tabBarItem key="tabBarItem" title="" image="cloud.sun" catalog="system" id="aN9-au-nqg"/>
+                    <connections>
+                        <outlet property="cityNameLable" destination="Stf-BJ-362" id="mtY-kE-Mnz"/>
+                        <outlet property="pressureLable" destination="7HE-7V-v18" id="H3d-hJ-fpu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M5P-ej-HVG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="91" y="291"/>
+            <point key="canvasLocation" x="88" y="463"/>
         </scene>
-        <!--Item 1-->
+        <!--Tab OneVC-->
         <scene sceneID="AO7-ZZ-CWc">
             <objects>
-                <viewController id="nbw-Rf-bK5" customClass="ViewController" customModule="weather" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nbw-Rf-bK5" customClass="TabOneVC" customModule="weather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y39-XF-7AR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQf-Hc-zLD">
                                 <rect key="frame" x="85" y="90" width="150" height="110"/>
-                                <fontDescription key="fontDescription" name="DamascusBold" family="Damascus" pointSize="50"/>
+                                <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="40"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="T" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDG-Lg-t1N">
                                 <rect key="frame" x="85" y="185" width="150" height="110"/>
-                                <fontDescription key="fontDescription" name="DamascusBold" family="Damascus" pointSize="50"/>
+                                <fontDescription key="fontDescription" name="DamascusBold" family="Damascus" pointSize="42"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uia-AG-Qf5">
                                 <rect key="frame" x="43" y="282" width="235" height="107"/>
-                                <fontDescription key="fontDescription" name="DamascusBold" family="Damascus" pointSize="41"/>
+                                <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="31"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bK5-g2-R2f"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="cDG-Lg-t1N" firstAttribute="centerX" secondItem="bK5-g2-R2f" secondAttribute="centerX" id="1Mx-VD-cJk"/>
                             <constraint firstItem="uQf-Hc-zLD" firstAttribute="centerX" secondItem="bK5-g2-R2f" secondAttribute="centerX" id="608-ZL-C7G"/>
@@ -62,7 +86,7 @@
                             <constraint firstItem="Uia-AG-Qf5" firstAttribute="centerX" secondItem="bK5-g2-R2f" secondAttribute="centerX" id="nHJ-9N-T3e"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="rVv-e1-akC"/>
+                    <tabBarItem key="tabBarItem" title="" image="thermometer" catalog="system" id="rVv-e1-akC"/>
                     <connections>
                         <outlet property="cityNameLabel" destination="uQf-Hc-zLD" id="mDH-kP-Qss"/>
                         <outlet property="currentTempLabel" destination="cDG-Lg-t1N" id="8rm-wQ-jaf"/>
@@ -93,14 +117,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cloud.sun" catalog="system" width="128" height="95"/>
+        <image name="thermometer" catalog="system" width="81" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

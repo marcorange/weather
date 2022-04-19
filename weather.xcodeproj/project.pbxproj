@@ -12,10 +12,11 @@
 		CE1833E3280A2307009FFF46 /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1833E2280A2307009FFF46 /* WeatherDataModel.swift */; };
 		CE937DE328062DBB001D2110 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE937DE228062DBB001D2110 /* AppDelegate.swift */; };
 		CE937DE528062DBB001D2110 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE937DE428062DBB001D2110 /* SceneDelegate.swift */; };
-		CE937DE728062DBB001D2110 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE937DE628062DBB001D2110 /* ViewController.swift */; };
+		CE937DE728062DBB001D2110 /* TabOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE937DE628062DBB001D2110 /* TabOneVC.swift */; };
 		CE937DEA28062DBB001D2110 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE937DE828062DBB001D2110 /* Main.storyboard */; };
 		CE937DEC28062DBE001D2110 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE937DEB28062DBE001D2110 /* Assets.xcassets */; };
 		CE937DEF28062DBE001D2110 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE937DED28062DBE001D2110 /* LaunchScreen.storyboard */; };
+		CEB522BE280EDB7200E09BE1 /* TabTwoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB522BD280EDB7200E09BE1 /* TabTwoVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,11 +28,12 @@
 		CE937DDF28062DBB001D2110 /* weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE937DE228062DBB001D2110 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE937DE428062DBB001D2110 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE937DE628062DBB001D2110 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE937DE628062DBB001D2110 /* TabOneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabOneVC.swift; sourceTree = "<group>"; };
 		CE937DE928062DBB001D2110 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE937DEB28062DBE001D2110 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE937DEE28062DBE001D2110 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE937DF028062DBE001D2110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEB522BD280EDB7200E09BE1 /* TabTwoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabTwoVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +90,8 @@
 				CE1833B82808E0CF009FFF46 /* Services */,
 				CE937DE228062DBB001D2110 /* AppDelegate.swift */,
 				CE937DE428062DBB001D2110 /* SceneDelegate.swift */,
-				CE937DE628062DBB001D2110 /* ViewController.swift */,
+				CE937DE628062DBB001D2110 /* TabOneVC.swift */,
+				CEB522BD280EDB7200E09BE1 /* TabTwoVC.swift */,
 				CE937DE828062DBB001D2110 /* Main.storyboard */,
 				CE937DEB28062DBE001D2110 /* Assets.xcassets */,
 				CE937DED28062DBE001D2110 /* LaunchScreen.storyboard */,
@@ -221,8 +224,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE1833BA2808E107009FFF46 /* WeatherService.swift in Sources */,
-				CE937DE728062DBB001D2110 /* ViewController.swift in Sources */,
+				CE937DE728062DBB001D2110 /* TabOneVC.swift in Sources */,
 				CE937DE328062DBB001D2110 /* AppDelegate.swift in Sources */,
+				CEB522BE280EDB7200E09BE1 /* TabTwoVC.swift in Sources */,
 				CE1833E3280A2307009FFF46 /* WeatherDataModel.swift in Sources */,
 				CE937DE528062DBB001D2110 /* SceneDelegate.swift in Sources */,
 			);
