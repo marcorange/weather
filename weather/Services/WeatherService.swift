@@ -16,6 +16,7 @@ class WeatherService {
 	
 	var weatherDescription = ""
 	var weatherDescriptionIconID = 0
+	var descriptionIconName = ""
 	
 	var currentTemp = 0.0
 	var tempFeelsLike = 0.0
@@ -33,13 +34,12 @@ class WeatherService {
 	var sunriseTime = 0
 	var sunsetTime = 0
 	
-	var cityName = ""
+	var fetchedCity = ""
 	
-	// validateCity() ?
-	func fetchWeatherData(completion: @escaping () -> ()) {
+	func fetchWeatherData(forCity cityName: String, completion: @escaping () -> ()) {
 		let url = "https://api.openweathermap.org/data/2.5/weather"
 		let apiKey = "fcab6dfb7a165ced098153f4f57903fc"
-		let parameters: Parameters = [ "q": self.cityName,
+		let parameters: Parameters = [ "q": cityName, //self.cityName,
 									   "units": "metric",
 									   "appid": apiKey ]
 		
@@ -55,6 +55,7 @@ class WeatherService {
 	private func parseWeatherData(_ data: WeatherDataModel) {
 		self.weatherDescription = data.weather[0].description
 		self.weatherDescriptionIconID = data.weather[0].id
+		setDescriptionIcon(weatherDescriptionIconID)
 		
 		guard let temp = data.main["temp"] else { return }
 		self.currentTemp = temp
@@ -80,7 +81,30 @@ class WeatherService {
 		self.sunriseTime = data.sys.sunrise
 		self.sunsetTime = data.sys.sunset
 		
-		self.cityName = data.name
+		self.fetchedCity = data.name
+	}
+	
+	private func setDescriptionIcon(_ id: Int) {
+		if id / 100 == 2 {
+			descriptionIconName = "Thunderstorm"
+		}
+		if id / 100 == 3 || id / 100 == 5 {
+			descriptionIconName = "Rain"
+		}
+		if id / 100 == 6 {
+			descriptionIconName = "Snow"
+		}
+		if id / 100 == 7 {
+			descriptionIconName = "Atmosphere"
+		}
+		if id / 100 == 8 {
+			if id == 800 {
+				descriptionIconName = "Clear"
+			}
+			else {
+				descriptionIconName = "Clouds"
+			}
+		}
 	}
 }
 
