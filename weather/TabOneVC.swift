@@ -24,7 +24,7 @@ class TabOneVC: UIViewController {
 	
 	private func loadWeatherData(forCity requestedCity: String) {
 		WeatherService.shared.fetchWeatherData(forCity: requestedCity) {
-			self.currentTempLabel.text = String(WeatherService.shared.currentTemp)
+			self.currentTempLabel.text = String(Int(round(WeatherService.shared.currentTemp))) + "°C"
 			self.cityNameLabel.text = WeatherService.shared.fetchedCity
 			self.weatherDescriptionLabel.text = String(WeatherService.shared.weatherDescription)
 			self.descriptionIcon.image = UIImage(named: WeatherService.shared.descriptionIconName)

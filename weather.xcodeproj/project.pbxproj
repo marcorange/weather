@@ -17,6 +17,8 @@
 		CE937DEC28062DBE001D2110 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE937DEB28062DBE001D2110 /* Assets.xcassets */; };
 		CE937DEF28062DBE001D2110 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE937DED28062DBE001D2110 /* LaunchScreen.storyboard */; };
 		CEB522BE280EDB7200E09BE1 /* TabTwoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB522BD280EDB7200E09BE1 /* TabTwoVC.swift */; };
+		CEB522C12811978700E09BE1 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB522BF2811978700E09BE1 /* CollectionViewCell.swift */; };
+		CEB522C22811978700E09BE1 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB522C02811978700E09BE1 /* CollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		CE937DEE28062DBE001D2110 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE937DF028062DBE001D2110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEB522BD280EDB7200E09BE1 /* TabTwoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabTwoVC.swift; sourceTree = "<group>"; };
+		CEB522BF2811978700E09BE1 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		CEB522C02811978700E09BE1 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,13 +95,23 @@
 				CE937DE228062DBB001D2110 /* AppDelegate.swift */,
 				CE937DE428062DBB001D2110 /* SceneDelegate.swift */,
 				CE937DE628062DBB001D2110 /* TabOneVC.swift */,
-				CEB522BD280EDB7200E09BE1 /* TabTwoVC.swift */,
+				CEB522C32813823A00E09BE1 /* TabTwo */,
 				CE937DE828062DBB001D2110 /* Main.storyboard */,
 				CE937DEB28062DBE001D2110 /* Assets.xcassets */,
 				CE937DED28062DBE001D2110 /* LaunchScreen.storyboard */,
 				CE937DF028062DBE001D2110 /* Info.plist */,
 			);
 			path = weather;
+			sourceTree = "<group>";
+		};
+		CEB522C32813823A00E09BE1 /* TabTwo */ = {
+			isa = PBXGroup;
+			children = (
+				CEB522BF2811978700E09BE1 /* CollectionViewCell.swift */,
+				CEB522C02811978700E09BE1 /* CollectionViewCell.xib */,
+				CEB522BD280EDB7200E09BE1 /* TabTwoVC.swift */,
+			);
+			path = TabTwo;
 			sourceTree = "<group>";
 		};
 		DE3C75DE16EF77E2F52CEE1B /* Frameworks */ = {
@@ -170,6 +184,7 @@
 			files = (
 				CE937DEF28062DBE001D2110 /* LaunchScreen.storyboard in Resources */,
 				CE937DEC28062DBE001D2110 /* Assets.xcassets in Resources */,
+				CEB522C22811978700E09BE1 /* CollectionViewCell.xib in Resources */,
 				CE937DEA28062DBB001D2110 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,6 +241,7 @@
 				CE1833BA2808E107009FFF46 /* WeatherService.swift in Sources */,
 				CE937DE728062DBB001D2110 /* TabOneVC.swift in Sources */,
 				CE937DE328062DBB001D2110 /* AppDelegate.swift in Sources */,
+				CEB522C12811978700E09BE1 /* CollectionViewCell.swift in Sources */,
 				CEB522BE280EDB7200E09BE1 /* TabTwoVC.swift in Sources */,
 				CE1833E3280A2307009FFF46 /* WeatherDataModel.swift in Sources */,
 				CE937DE528062DBB001D2110 /* SceneDelegate.swift in Sources */,

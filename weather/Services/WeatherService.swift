@@ -27,19 +27,16 @@ class WeatherService {
 	
 	var windSpeed = 0.0
 	
-	var cloudiness = 0
-	
-	var calcTime = 0
-	
-	var sunriseTime = 0
-	var sunsetTime = 0
+	var timezone = 0
+	var sunriseTime = ""
+	var sunsetTime = ""
 	
 	var fetchedCity = ""
 	
 	func fetchWeatherData(forCity cityName: String, completion: @escaping () -> ()) {
 		let url = "https://api.openweathermap.org/data/2.5/weather"
 		let apiKey = "fcab6dfb7a165ced098153f4f57903fc"
-		let parameters: Parameters = [ "q": cityName, //self.cityName,
+		let parameters: Parameters = [ "q": cityName,
 									   "units": "metric",
 									   "appid": apiKey ]
 		
@@ -73,15 +70,19 @@ class WeatherService {
 		guard let speed = data.wind["speed"] else { return }
 		self.windSpeed = speed
 		
-		guard let clouds = data.clouds["all"] else { return }
-		self.cloudiness = clouds
-		
-		self.calcTime = data.dt
-		
-		self.sunriseTime = data.sys.sunrise
-		self.sunsetTime = data.sys.sunset
+		self.timezone = data.timezone
+		self.sunriseTime = convertTime(data.sys.sunrise)
+		self.sunsetTime = convertTime(data.sys.sunset)
 		
 		self.fetchedCity = data.name
+	}
+	
+	private func convertTime(_ timeUnix: Int) -> String {
+		let date = Date(timeIntervalSince1970: TimeInterval(timeUnix))
+		let dateFormatter = DateFormatter()
+		dateFormatter.timeStyle = .short
+		// как отображать в местном времени
+		return (dateFormatter.string(from: date))
 	}
 	
 	private func setDescriptionIcon(_ id: Int) {
