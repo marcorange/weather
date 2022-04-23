@@ -20,15 +20,23 @@ class TabOneVC: UIViewController {
 		super.viewDidLoad()
 		
 		searchBar.delegate = self
+		
+		cityNameLabel.text = "Enter Location"
+		currentTempLabel.text = ""
+		weatherDescriptionLabel.text = ""
 	}
 	
 	private func loadWeatherData(forCity requestedCity: String) {
 		WeatherService.shared.fetchWeatherData(forCity: requestedCity) {
-			self.currentTempLabel.text = String(Int(round(WeatherService.shared.currentTemp))) + "°C"
-			self.cityNameLabel.text = WeatherService.shared.fetchedCity
-			self.weatherDescriptionLabel.text = String(WeatherService.shared.weatherDescription)
-			self.descriptionIcon.image = UIImage(named: WeatherService.shared.descriptionIconName)
+			self.setLabels()
 		}
+	}
+	
+	private func setLabels() {
+		self.currentTempLabel.text = String(Int(round(WeatherService.shared.currentTemp))) + "°C"
+		self.cityNameLabel.text = WeatherService.shared.fetchedCity
+		self.weatherDescriptionLabel.text = String(WeatherService.shared.weatherDescription)
+		self.descriptionIcon.image = UIImage(named: WeatherService.shared.descriptionIconName)
 	}
 }
 
